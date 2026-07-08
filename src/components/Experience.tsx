@@ -1,5 +1,4 @@
-import { useState, useRef, useCallback, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 import { Section, SectionLabel } from "./shared";
 import { experience, trainingImages } from "../data/portfolio";
 import { ImageModal } from "./ImageModal";
@@ -68,88 +67,30 @@ export function Experience() {
 }
 
 function TrainingCarousel() {
-  const trackRef = useRef<HTMLDivElement>(null);
-  const [idx, setIdx] = useState(0);
-
-  const scrollTo = useCallback((index: number) => {
-    const track = trackRef.current;
-    if (!track) return;
-    const child = track.children[index] as HTMLElement;
-    if (child) child.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
-  }, []);
-
-  const next = useCallback(() => {
-    const n = (idx + 1) % trainingImages.length;
-    scrollTo(n);
-    setIdx(n);
-  }, [idx, scrollTo]);
-
-  const prev = useCallback(() => {
-    const n = (idx - 1 + trainingImages.length) % trainingImages.length;
-    scrollTo(n);
-    setIdx(n);
-  }, [idx, scrollTo]);
-
-  useEffect(() => {
-    const track = trackRef.current;
-    if (!track) return;
-    const handler = () => {
-      const w = (track.children[0] as HTMLElement)?.offsetWidth ?? 280;
-      setIdx(Math.round(track.scrollLeft / (w + 16)));
-    };
-    track.addEventListener("scroll", handler);
-    return () => track.removeEventListener("scroll", handler);
-  }, []);
-
   const [modal, setModal] = useState<{ src: string; caption: string } | null>(null);
+
+  const heights = ["h-52", "h-64", "h-48", "h-60", "h-56", "h-72", "h-44", "h-68"];
 
   return (
     <>
-      <div className="relative">
-        <div
-          ref={trackRef}
-          className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-4"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        >
-          {trainingImages.map((img, i) => (
-            <div
-              key={i}
-              className="snap-start shrink-0 w-64 relative rounded-lg overflow-hidden border border-border hover:border-primary/40 transition-all cursor-pointer group"
-              onClick={() => setModal({ src: img.src, caption: `${img.title} – ${img.location}` })}
-            >
-              <img src={img.src} alt={img.title} className="w-full h-40 object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-deep/90 via-deep/20 to-transparent p-4 flex flex-col justify-end">
-                <span className="font-mono text-xs text-primary/60">{img.title}</span>
-                <span className="font-mono text-[10px] text-muted">{img.location}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <button
-          onClick={prev}
-          className="absolute left-1 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full border border-border bg-deep/80 text-muted hover:text-primary hover:border-primary/40 transition-all flex items-center justify-center"
-        >
-          <ChevronLeft size={16} />
-        </button>
-        <button
-          onClick={next}
-          className="absolute right-1 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full border border-border bg-deep/80 text-muted hover:text-primary hover:border-primary/40 transition-all flex items-center justify-center"
-        >
-          <ChevronRight size={16} />
-        </button>
-
-        <div className="flex justify-center gap-1.5 mt-3">
-          {trainingImages.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => { scrollTo(i); setIdx(i); }}
-              className={`w-2 h-2 rounded-full transition-all ${
-                i === idx ? "bg-primary shadow-[0_0_6px_rgba(6,182,212,0.5)]" : "bg-border"
-              }`}
+      <div className="columns-2 md:columns-3 gap-3 space-y-3">
+        {trainingImages.map((img, i) => (
+          <div
+            key={i}
+            className={`break-inside-avoid relative rounded-lg overflow-hidden border border-border hover:border-primary/40 transition-all cursor-pointer group ${heights[i % heights.length]}`}
+            onClick={() => setModal({ src: img.src, caption: `${img.title} – ${img.location}` })}
+          >
+            <img
+              src={img.src}
+              alt={img.title}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
-          ))}
-        </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-deep/95 via-deep/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-end">
+              <span className="font-mono text-xs text-primary/60">{img.title}</span>
+              <span className="font-mono text-[10px] text-muted">{img.location}</span>
+            </div>
+          </div>
+        ))}
       </div>
 
       <ImageModal
