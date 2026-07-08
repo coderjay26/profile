@@ -40,14 +40,27 @@ export const philosophy = [
 
 export const experience = [
   {
-    role: "Senior Software Engineer",
+    role: "Development IT Supervisor / Senior Software Engineer",
     company: "WITS Corporation (FDC)",
-    period: "2024 - Present",
+    period: "May 2026 - Present",
     highlights: [
-      "SFA+ Suite: Developed and maintained 3+ mission-critical Sales Force Automation (SFA) applications — MyBuddy, Ravamate, and Nova SFA — using Flutter & Kotlin.",
-      "Native Integration: Engineered a high-performance Flutter-Kotlin printer library for logistics, supporting CPL and ESC/POS protocols to enable seamless native printing integration.",
-      "Database Architecture: Architected complex database schemas in MSSQL to support high-volume transaction processing for SFA systems.",
-      "Workflow Automation: Designed and deployed custom N8N automations for internal reporting and real-time data synchronization.",
+      "Promoted to lead the development team, overseeing architecture, sprint planning, and delivery of all SFA products.",
+      "Developed the Flutter version of MyBuddy, modernizing the legacy codebase for cross-platform performance.",
+    ],
+  },
+  {
+    role: "Senior Software Engineer",
+    company: "WITS Corporation (FDC) — Sister Company of FDC",
+    period: "July 2024 - May 2026",
+    highlights: [
+      "Built RAVAmate SFA (Monde Nissin) — a full-featured Sales Force Automation system for one of the largest food brands.",
+      "Built Nova SFA (CDO Foodsphere) — end-to-end SFA solution for meat processing and distribution.",
+      "Built SFA+ (Generic SFA) — a configurable SFA framework adaptable across multiple client deployments.",
+      "Kickstarted ELEVATE (Frabelle Company) — SFA system for the fishing and canned goods industry.",
+      "Kickstarted Shell Datu (Shell Company) — SFA system for fuel and lubricant route management.",
+      "Engineered a high-performance Flutter-Kotlin printer library for logistics, supporting CPL and ESC/POS protocols.",
+      "Architected complex database schemas in MSSQL for high-volume transaction processing.",
+      "Designed and deployed custom N8N automations for internal reporting and real-time data synchronization.",
     ],
   },
 ] as const;
