@@ -13,6 +13,7 @@ const iconMap: Record<string, Lucide.LucideIcon> = {
   Brain: Lucide.Brain,
   KanbanSquare: Lucide.KanbanSquare,
   CookingPot: Lucide.CookingPot,
+  MessageSquareText: Lucide.MessageSquareText,
 };
 
 export function Projects() {

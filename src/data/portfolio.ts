@@ -60,7 +60,6 @@ export const experience = [
       "Kickstarted Shell Datu (Shell Company) — SFA system for lubricant route management.",
       "Engineered a high-performance Flutter-Kotlin printer library for logistics, supporting CPL and ESC/POS protocols.",
       "Architected complex database schemas in MSSQL for high-volume transaction processing.",
-      "Designed and deployed custom N8N automations for internal reporting and real-time data synchronization.",
     ],
   },
 ] as const;
@@ -149,6 +148,14 @@ export const projects = [
     name: "Baon Maker",
     description: "A Gemini-powered Filipino lunch planner that suggests budget-friendly baon recipes based on protein preference, prep time, skill level, and budget. Features a weekly meal planner with auto-generated shopping lists.",
     stack: ["Flutter", "Dart", "Gemini AI"],
+    link: "",
+    linkLabel: "",
+  },
+  {
+    icon: "MessageSquareText",
+    name: "N8N Messenger Scheduler",
+    description: "A personal workflow automation project using N8N to schedule and send messages via Facebook Messenger. Designed for automated reminders and notifications.",
+    stack: ["N8N", "Facebook Messenger API"],
     link: "",
     linkLabel: "",
   },
