@@ -42,13 +42,13 @@ export const experience = [
   {
     role: "Development IT Supervisor / Senior Software Engineer",
     company: "WITS Corporation (FDC)",
-    period: "May 2026 - Present",
+    period: "May 16, 2026 - Present",
     highlights: [
       "Promoted to lead the development team, overseeing architecture, sprint planning, and delivery of all SFA products.",
     ],
   },
   {
-    role: "Senior Software Engineer",
+    role: "Software Engineer",
     company: "WITS Corporation (FDC) — Sister Company of FDC",
     period: "July 2024 - May 2026",
     highlights: [
