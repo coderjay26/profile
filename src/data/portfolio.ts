@@ -52,15 +52,6 @@ export const experience = [
   },
 ] as const;
 
-export const trainingImages = [
-  { src: "images/ravamate/training-ravamate.jpg", title: "RAVAmate Training", location: "Cebu – Field User Implementation (FUI)" },
-  { src: "images/ravamate/pd8.jpg", title: "RAVAmate Training", location: "Bacolod – PD8 Sales Team" },
-  { src: "images/ravamate/pd8-admin.jpg", title: "RAVAmate Training", location: "Bacolod – PD8 Admin Team" },
-  { src: "images/ravamate/nvm-salesman.jpg", title: "RAVAmate Training", location: "Valencia Bukidnon – NVM Sales Team" },
-  { src: "images/ravamate/nvm-field.jpg", title: "RAVAmate Training", location: "Valencia Bukidnon – Field Implementation" },
-  { src: "images/ravamate/fuo-training.jpg", title: "RAVAmate Training", location: "Ozamis – Field User Implementation (FUI)" },
-] as const;
-
 export const featuredProject = {
   name: "Jj POS System",
   logo: "images/jj_pos/JJLogo.png",

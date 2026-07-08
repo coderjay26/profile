@@ -1,7 +1,41 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Section, SectionLabel } from "./shared";
-import { experience, trainingImages } from "../data/portfolio";
+import { experience } from "../data/portfolio";
 import { ImageModal } from "./ImageModal";
+
+const trainingModules = import.meta.glob<string>(
+  "/src/assets/training/**/*.{jpg,jpeg,png,webp}",
+  { eager: true, import: "default" },
+);
+
+function formatLabel(name: string): string {
+  return name
+    .replace(/[-_]/g, " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase())
+    .replace(/\bSfa\b/g, "SFA")
+    .replace(/\bFuo\b/g, "FUI");
+}
+
+interface TrainingImage {
+  src: string;
+  title: string;
+  location: string;
+}
+
+function useTrainingImages(): TrainingImage[] {
+  return useMemo(() => {
+    return Object.entries(trainingModules).map(([path, url]) => {
+      const parts = path.replace("/src/assets/training/", "").split("/");
+      const folder = parts[0];
+      const file = parts[parts.length - 1].replace(/\.[^.]+$/, "");
+      return {
+        src: url,
+        title: formatLabel(folder),
+        location: formatLabel(file),
+      };
+    });
+  }, []);
+}
 
 export function Experience() {
   return (
@@ -68,15 +102,15 @@ export function Experience() {
 
 function TrainingCarousel() {
   const [modal, setModal] = useState<{ src: string; caption: string } | null>(null);
-
+  const images = useTrainingImages();
   const heights = ["h-52", "h-64", "h-48", "h-60", "h-56", "h-72", "h-44", "h-68"];
 
   return (
     <>
       <div className="columns-2 md:columns-3 gap-3 space-y-3">
-        {trainingImages.map((img, i) => (
+        {images.map((img, i) => (
           <div
-            key={i}
+            key={img.src}
             className={`break-inside-avoid relative rounded-lg overflow-hidden border border-border hover:border-primary/40 transition-all cursor-pointer group ${heights[i % heights.length]}`}
             onClick={() => setModal({ src: img.src, caption: `${img.title} – ${img.location}` })}
           >
