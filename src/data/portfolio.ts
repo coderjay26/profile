@@ -45,7 +45,6 @@ export const experience = [
     period: "May 2026 - Present",
     highlights: [
       "Promoted to lead the development team, overseeing architecture, sprint planning, and delivery of all SFA products.",
-      "Developed the Flutter version of MyBuddy, modernizing the legacy codebase for cross-platform performance.",
     ],
   },
   {
@@ -53,6 +52,7 @@ export const experience = [
     company: "WITS Corporation (FDC) — Sister Company of FDC",
     period: "July 2024 - May 2026",
     highlights: [
+      "Built MyBuddy (Nestle) — Flutter migration of the legacy SFA application, delivering cross-platform performance for field sales operations.",
       "Built RAVAmate SFA (Monde Nissin) — a full-featured Sales Force Automation system for one of the largest food brands.",
       "Built Nova SFA (CDO Foodsphere) — end-to-end SFA solution for meat processing and distribution.",
       "Built SFA+ (Generic SFA) — a configurable SFA framework adaptable across multiple client deployments.",
