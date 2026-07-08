@@ -131,4 +131,20 @@ export const projects = [
     link: "https://github.com/coderjay26/Mediacal-Diagnosis",
     linkLabel: "View Source",
   },
+  {
+    icon: "KanbanSquare",
+    name: "SprintFlow",
+    description: "A project management system for software teams — manage sprints, unblock tasks, and track progress in real-time. Built for cross-platform collaboration.",
+    stack: ["Flutter", "Dart", "Supabase"],
+    link: "https://sprintflow.jj-automation-solutions.online/",
+    linkLabel: "Visit SprintFlow",
+  },
+  {
+    icon: "CookingPot",
+    name: "Baon Maker",
+    description: "A Gemini-powered Filipino lunch planner that suggests budget-friendly baon recipes based on protein preference, prep time, skill level, and budget. Features a weekly meal planner with auto-generated shopping lists.",
+    stack: ["Flutter", "Dart", "Gemini AI"],
+    link: "",
+    linkLabel: "",
+  },
 ] as const;
