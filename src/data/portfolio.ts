@@ -40,7 +40,7 @@ export const philosophy = [
 
 export const experience = [
   {
-    role: "Development IT Supervisor / Senior Software Engineer",
+    role: "Developmental IT Supervisor / Developmental Senior Software Engineer",
     company: "WITS Corporation (FDC)",
     period: "May 16, 2026 - Present",
     highlights: [
