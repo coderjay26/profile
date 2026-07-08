@@ -139,7 +139,7 @@ export const projects = [
     icon: "KanbanSquare",
     name: "SprintFlow",
     description: "A project management system for software teams — manage sprints, unblock tasks, and track progress in real-time. Built for cross-platform collaboration.",
-    stack: ["Flutter", "Dart", "Supabase"],
+    stack: ["Flutter", "Dart", "Firebase"],
     link: "https://sprintflow.jj-automation-solutions.online/",
     linkLabel: "Visit SprintFlow",
   },
