@@ -58,6 +58,7 @@ export const trainingImages = [
   { src: "images/ravamate/pd8-admin.jpg", title: "RAVAmate Training", location: "Bacolod – PD8 Admin Team" },
   { src: "images/ravamate/nvm-salesman.jpg", title: "RAVAmate Training", location: "Valencia Bukidnon – NVM Sales Team" },
   { src: "images/ravamate/nvm-field.jpg", title: "RAVAmate Training", location: "Valencia Bukidnon – Field Implementation" },
+  { src: "images/ravamate/fuo-training.jpg", title: "RAVAmate Training", location: "Ozamis – Field User Implementation (FUI)" },
 ] as const;
 
 export const featuredProject = {
