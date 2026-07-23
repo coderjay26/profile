@@ -18,7 +18,7 @@ const iconMap: Record<string, Lucide.LucideIcon> = {
 
 export function Projects() {
   return (
-    <Section>
+    <Section id="projects">
       <div className="border border-border bg-surface backdrop-blur-xl rounded-lg p-8 sm:p-12">
         <SectionLabel fig="FIG 4.01" label="System Components" />
 

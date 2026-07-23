@@ -3,7 +3,7 @@ import { philosophy } from "../data/portfolio";
 
 export function Philosophy() {
   return (
-    <Section>
+    <Section id="philosophy">
       <div className="border border-border bg-surface backdrop-blur-xl rounded-lg p-8 sm:p-12">
         <SectionLabel fig="FIG 2.02" label="Architecture Rationale" />
 

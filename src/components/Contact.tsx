@@ -20,7 +20,7 @@ function LinkedinIcon(props: React.SVGProps<SVGSVGElement>) {
 
 export function Contact() {
   return (
-    <Section>
+    <Section id="contact">
       <div className="border border-border bg-surface backdrop-blur-xl rounded-lg p-8 sm:p-12 text-center">
         <SectionLabel fig="FIG 5.01" label="Communications Terminal" />
 

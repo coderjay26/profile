@@ -3,7 +3,7 @@ import { skills } from "../data/portfolio";
 
 export function Skills() {
   return (
-    <Section>
+    <Section id="skills">
       <div className="border border-border bg-surface backdrop-blur-xl rounded-lg p-8 sm:p-12">
         <SectionLabel fig="FIG 2.01" label="Tech Arsenal" />
 

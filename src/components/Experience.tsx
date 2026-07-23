@@ -39,7 +39,7 @@ function useTrainingImages(): TrainingImage[] {
 
 export function Experience() {
   return (
-    <Section>
+    <Section id="experience">
       <div className="border border-border bg-surface backdrop-blur-xl rounded-lg p-8 sm:p-12">
         <SectionLabel fig="FIG 3.01" label="Deployment Log" />
 

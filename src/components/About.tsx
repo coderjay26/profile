@@ -2,7 +2,7 @@ import { Section, SectionLabel } from "./shared";
 
 export function About() {
   return (
-    <Section>
+    <Section id="about">
       <div className="border border-border bg-surface backdrop-blur-xl rounded-lg p-8 sm:p-12">
         <SectionLabel fig="FIG 1.01" label="Operator Profile" />
 
