@@ -4,7 +4,7 @@ import { social, site } from "../data/portfolio";
 
 export function Hero() {
   return (
-    <section className="relative z-10 min-h-screen flex items-center pt-24 pb-32 px-6 overflow-hidden">
+    <section id="hero" className="relative z-10 min-h-screen flex items-center pt-24 pb-32 px-6 overflow-hidden">
       {/* Scanline overlay */}
       <div className="absolute inset-0 pointer-events-none z-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.1)_50%)] bg-[length:100%_4px] opacity-20" />
       <div className="absolute inset-0 pointer-events-none z-0 animate-scan bg-[linear-gradient(transparent_0%,rgba(6,182,212,0.03)_50%,transparent_100%)] bg-[length:100%_200%]" />
